@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velune Natural Skincare</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+  
+  <header class="header">
+    <div class="brand-block">
+      <span class="brand-title">Velune</span>
+      <span class="brand-sub">Natural Skincare</span>
+    </div>
+    
+    <nav aria-label="Main Navigation">
+      <ul class="nav-menu">
+        <li><a href="#hero">The Cream</a></li>
+        <li><a href="#products">Collection</a></li>
+        <li><a href="#story">Formula</a></li>
+        <li><a href="#ingredients">Botanicals</a></li>
+        <li><a href="#ritual">Ritual</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </nav>
+    
+    <div class="header-right">
+      <button class="cart-pill-btn" aria-label="Open Shopping Bag">
+        <span>BAG</span>
+        <span class="cart-count" id="header-cart-count">1</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        
+        <div class="hero-info-col">
+          <div class="tag-badge">INSPIRED BY PAKISTANI BEAUTY RITUALS</div>
+          
+          <h1 class="hero-title">
+            Body Love Restoring Care
+            <span>HAND CREAM</span>
+          </h1>
+          
+          <p class="hero-description">
+            Help restore dry hands with our nourishing coconut oil and almond milk-infused hand cream. Formulated with Ceramide Restoring Serum to deeply replenish moisture and lock in skin softness.
+          </p>
+
+          <div class="purchase-controls">
+            <div class="volume-picker-label">
+              <span>SELECT SIZE</span>
+                <span id="selected-vol-label" style="color: var(--brand-blue);">75 ML / 2.5 FL. OZ.</span>
+            </div>
+
+            <div class="volume-options">
+              <button class="vol-option-btn active" data-vol="75ml">75 ml</button>
+              <button class="vol-option-btn" data-vol="150ml">150 ml</button>
+              <button class="vol-option-btn" data-vol="200ml">200 ml</button>
+            </div>
+
+            <div class="price-cta-row">
+              <div class="price-display-block">
+                <span class="price-main" id="price-main-display">550</span>
+                <span class="price-sub">COMPLIMENTARY SHIPPING</span>
+              </div>
+              <button class="btn-add-to-cart" id="btn-hero-buy">ADD TO BAG</button>
+            </div>
+          </div>
+
+          
+          <div class="hero-badges-row">
+            <div class="badge-item">
+              <div class="badge-icon">✓</div>
+              <span>48H Moisture Lock</span>
+            </div>
+            <div class="badge-item">
+              <div class="badge-icon">✓</div>
+              <span>100% Vegan Formula</span>
+            </div>
+            <div class="badge-item">
+              <div class="badge-icon">✓</div>
+              <span>Fast Absorbing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-poster-col" id="poster-wrapper">
+          <div class="poster-canvas-wrapper">
+            <img src="images/velune_poster.png" alt="Velune Natural Skincare Poster" class="poster-img">
+
+            <div class="hotspot-pin pin-1" aria-label="Coconut Oil Info">
+              <span>+</span>
+              <div class="hotspot-tooltip">
+                <div class="tooltip-title">[1] Coconut Oil Extract</div>
+                <div class="tooltip-body">Rich in medium-chain fatty acids that penetrate deep into skin layers to repair dry cracks.</div>
+              </div>
+            </div>
+
+            <div class="hotspot-pin pin-2" aria-label="Almond Milk Info">
+              <span>+</span>
+              <div class="hotspot-tooltip">
+                <div class="tooltip-title">[2] Sweet Almond Milk</div>
+                <div class="tooltip-body">Packed with natural Vitamin E to soothe dryness, seal cuticles, and leave skin velvet smooth.</div>
+              </div>
+            </div>
+
+            <div class="hotspot-pin pin-3" aria-label="Volume Stamp Info">
+              <span>+</span>
+              <div class="hotspot-tooltip">
+                <div class="tooltip-title">75ml Cargo Certified</div>
+                <div class="tooltip-body">Ergonomic size crafted for daily handbag carry and instant moisture restoration on the go.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-products" id="products">
+      <div class="container">
+        
+        <div class="products-header">
+          <div class="tag-badge" style="margin-bottom: 12px;">THE BODY LOVE COLLECTION</div>
+          <h2 class="section-heading-lg">Serum-infused body care rituals.</h2>
+          <p class="section-para" style="margin: 0 auto;">Formulated with replenishing ceramides and cold-pressed botanical lipids for 48-hour skin transformation.</p>
+
+      
+          <div class="filter-tabs">
+            <button class="filter-tab-btn active" data-filter="all">ALL PRODUCTS</button>
+            <button class="filter-tab-btn" data-filter="hand">HAND CARE</button>
+            <button class="filter-tab-btn" data-filter="lotions">BODY LOTIONS</button>
+            <button class="filter-tab-btn" data-filter="washes">BODY WASHES</button>
+            <button class="filter-tab-btn" data-filter="butters">SCRUBS & BUTTERS</button>
+          </div>
+        </div>
+
+        
+        <div class="products-catalog-grid">
+          
+          
+          <article class="catalog-card" data-category="hand">
+            <div class="card-img-holder">
+              <img src="images/velune_poster.png" alt="Restoring Care Hand Cream">
+            </div>
+            <div class="card-category-tag">BESTSELLER • 75 ML</div>
+            <h3 class="card-prod-title">Restoring Care Hand Cream</h3>
+            <p class="card-actives-copy">Coconut Oil & Sweet Almond Milk for dry hand repair.</p>
+            <div class="card-bottom-row">
+              <span class="card-price">550</span>
+              <button class="btn-card-add" data-id="hand-cream">ADD TO BAG</button>
+            </div>
+          </article>
+
+          
+          <article class="catalog-card" data-category="lotions">
+            <div class="card-img-holder">
+              <img src="images/lotion.png" alt="Intense Care Body Lotion">
+            </div>
+            <div class="card-category-tag">DEEP MOISTURE • 400 ML</div>
+            <h3 class="card-prod-title">Intense Care Body Lotion</h3>
+            <p class="card-actives-copy">Ceramide Serum & Almond Oil for 48H continuous hydration.</p>
+            <div class="card-bottom-row">
+              <span class="card-price">2,400</span>
+              <button class="btn-card-add" data-id="body-lotion">ADD TO BAG</button>
+            </div>
+          </article>
+
+          
+          <article class="catalog-card" data-category="washes">
+            <div class="card-img-holder">
+              <img src="images/bodywash.png" alt="Moisture Boost Body Wash">
+            </div>
+            <div class="card-category-tag">HYDRATION • 500 ML</div>
+            <h3 class="card-prod-title">Moisture Boost Body Wash</h3>
+            <p class="card-actives-copy">Hyaluronic Serum & Wild Aloe Vera for soft skin cleansing.</p>
+            <div class="card-bottom-row">
+              <span class="card-price">2,200</span>
+              <button class="btn-card-add" data-id="body-wash">ADD TO BAG</button>
+            </div>
+          </article>
+
+         
+          <article class="catalog-card" data-category="butters">
+            <div class="card-img-holder">
+              <img src="images/bodybutter.png" alt="Glowing Care Body Butter">
+            </div>
+            <div class="card-category-tag">RADIANCE • 200 ML</div>
+            <h3 class="card-prod-title">Glowing Care Body Butter</h3>
+            <p class="card-actives-copy">Whipped Mango Butter & Vitamin C for glowing skin boost.</p>
+            <div class="card-bottom-row">
+              <span class="card-price">1,999</span>
+              <button class="btn-card-add" data-id="body-butter">ADD TO BAG</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  
+    <section class="section-story" id="story">
+      <div class="container story-grid">
+        
+        <div class="story-image-box">
+          <img src="images/velune_poster.png" alt="Restoring Care Formula Detail" style="max-width: 360px;">
+        </div>
+
+        <div>
+          <div class="tag-badge" style="margin-bottom: 16px;">THE BOTANICAL PHILOSOPHY</div>
+          <h2 class="section-heading-lg">Inspired by ancient pakistani traditions of lipid restoring oils.</h2>
+          <p class="section-para">
+            Hands and body skin endure constant environmental stress and frequent washing. velune Body Love Restoring Care combines organic cold-pressed coconut oil and sweet almond milk with our Ceramide Restoring Serum.
+          </p>
+          <p class="section-para">
+            This non-greasy lipid therapy works with your skin to build essential ceramides, boosting skin strength and sealing in 48 hours of continuous hydration.
+          </p>
+
+          <div class="story-stats-grid">
+            <div>
+              <div class="stat-val">48H</div>
+              <div class="stat-desc">Continuous Hydration</div>
+            </div>
+            <div>
+              <div class="stat-val">100%</div>
+              <div class="stat-desc">Vegan & Cruelty-Free</div>
+            </div>
+            <div>
+              <div class="stat-val">3 SEC</div>
+              <div class="stat-desc">Velvet Absorption</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <section class="section-ingredients" id="ingredients">
+      <div class="container">
+        
+        <div class="ingredients-header">
+          <div class="tag-badge" style="margin-bottom: 12px;">KEY BOTANICAL ACTIVES</div>
+          <h2 class="section-heading-lg">Nourishing actives engineered for dry skin.</h2>
+        </div>
+
+        <div class="ingredients-cards-grid">
+          
+          <article class="ing-card">
+            <div class="ing-tag-num">[ 01 ]</div>
+            <h3 class="ing-title">Coconut Oil Extract</h3>
+            <p class="ing-copy">Rich in lauric fatty acids. Deeply nourishes rough skin micro-cracks and restores natural radiance without weight.</p>
+            <div class="ing-meta">
+              <span>ORIGIN: INDIA</span>
+              <span>EXTRACTION: COLD-PRESSED</span>
+            </div>
+          </article>
+
+          <article class="ing-card">
+            <div class="ing-tag-num">[ 02 ]</div>
+            <h3 class="ing-title">Sweet Almond Milk</h3>
+            <p class="ing-copy">High in natural Vitamin E and essential lipids. Calms irritation, softens dry cuticles, and locks in velvety moisture.</p>
+            <div class="ing-meta">
+              <span>ORIGIN: PROVENCE</span>
+              <span>FORMULA: ORGANIC MILK</span>
+            </div>
+          </article>
+
+          <article class="ing-card">
+            <div class="ing-tag-num">[ 03 ]</div>
+            <h3 class="ing-title">Ceramide Serum</h3>
+            <p class="ing-copy">Triggers skin’s natural lipid synthesis to fortify the moisture barrier against frequent handwashing and winter air.</p>
+            <div class="ing-meta">
+              <span>DERMATOLOGIST</span>
+              <span>APPROVED</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section-ritual" id="ritual">
+      <div class="container">
+        
+        <div class="tag-badge" style="margin-bottom: 12px;">APPLICATION RITUAL</div>
+        <h2 class="section-heading-lg">Transform routine into a moment of self-care.</h2>
+
+        <div class="ritual-grid">
+          
+          <div class="ritual-card">
+            <span class="step-num-badge">STEP 01</span>
+            <h3 class="step-heading">Dispense & Warm</h3>
+            <p class="step-body">Squeeze a pea-sized amount onto the back of your hand. Gently warm between palms to activate botanical lipid oils.</p>
+          </div>
+
+          <div class="ritual-card">
+            <span class="step-num-badge">STEP 02</span>
+            <h3 class="step-heading">Massage Cuticles</h3>
+            <p class="step-body">Massage cream thoroughly across knuckles, palm lines, and dry cuticle beds to nourish nail beds.</p>
+          </div>
+
+          <div class="ritual-card">
+            <span class="step-num-badge">STEP 03</span>
+            <h3 class="step-heading">Inhale & Seal</h3>
+            <p class="step-body">Inhale the soothing aroma of warm coconut and roasted almond as the serum locks in 48-hour moisture.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section-reviews" id="reviews">
+      <div class="container">
+        
+        <div style="text-align: center;">
+          <div class="tag-badge" style="margin-bottom: 12px;">VERIFIED REVIEWS</div>
+          <h2 class="section-heading-lg">Loved by dry skin sufferers.</h2>
+        </div>
+
+        <div class="reviews-grid">
+          
+          <div class="rev-card">
+            <div class="rev-stars">★★★★★</div>
+            <p class="rev-quote">"My hands used to crack every winter from constant washing. This cream completely transformed my skin in two days! Never feels greasy."</p>
+            <div class="rev-name">Alina Khan  <span>Verified Buyer</span></div>
+          </div>
+
+          <div class="rev-card">
+            <div class="rev-stars">★★★★★</div>
+            <p class="rev-quote">"The texture is incredible. It sinks in within 3 seconds so I can immediately use my laptop or phone without leaving oily marks."</p>
+            <div class="rev-name">Zara Ehsan <span>Verified Buyer</span></div>
+          </div>
+
+          <div class="rev-card">
+            <div class="rev-stars">★★★★★</div>
+            <p class="rev-quote">"The coconut and almond scent is warm, comforting, and natural. I keep one tube at work and one by my bed."</p>
+            <div class="rev-name">Khadija Naeem  <span>Verified Buyer</span></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section-cta">
+      <div class="container cta-container">
+        <div class="tag-badge" style="margin-bottom: 16px;">GIVE YOUR SKIN THE LOVE IT DESERVES</div>
+        <h2 class="cta-headline">Experience Body Love Today.</h2>
+        <p class="cta-sub">Order now and enjoy complimentary express delivery with every order.</p>
+
+        <button class="btn-add-to-cart" id="btn-add-bag" style="max-width: 300px; margin: 0 auto;">ADD TO BAG </button>
+      </div>
+    </section>
+  </main>
+
+  
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <span class="footer-logo">Velune</span>
+        <p class="footer-text">Body Love Restoring Care.<br>Nourishing beauty rituals engineered for healthy, radiant skin.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-head">NAVIGATE</h4>
+        <ul class="footer-ul">
+          <li><a href="#hero">The Cream</a></li>
+          <li><a href="#products">Collection</a></li>
+          <li><a href="#story">Formula Science</a></li>
+          <li><a href="#ingredients">Botanicals</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-head">SUSTAINABILITY</h4>
+        <ul class="footer-ul">
+          <li><a href="#">PETA Cruelty-Free</a></li>
+          <li><a href="#">Recyclable Packaging</a></li>
+          <li><a href="#">Sustainable Sourcing</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-head">JOIN THE GAZETTE</h4>
+        <p class="footer-text">Subscribe to receive private invitations and skincare offers.</p>
+        <form class="newsletter-box" onsubmit="event.preventDefault(); alert('Thank you for joining velune Body Love!');">
+          <input type="email" placeholder="Enter your email" required aria-label="Email address">
+          <button type="submit">JOIN</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-btm">
+      <span>© 2026 velune Body Love. All Rights Reserved.</span>
+      
+    </div>
+  </footer>
+
+  
+  <div class="cart-drawer" id="cart-drawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <div class="drawer-panel">
+      
+      <div class="drawer-head">
+        <h3 class="drawer-title">YOUR SHOPPING BAG</h3>
+        <button class="drawer-close" id="drawer-close" aria-label="Close Bag">✕</button>
+      </div>
+
+      
+      <div class="cart-items-list" id="cart-items-container">
+        
+      </div>
+
+      <div class="drawer-foot">
+        <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 16px; margin-bottom: 16px;">
+          <span>SUBTOTAL</span>
+          <span id="drawer-subtotal-val">550</span>
+        </div>
+        <p style="font-size: 12px; color: #3E5436; font-weight: 700; margin-bottom: 20px;">✓ Free Express Delivery Included</p>
+
+        <button class="checkout-btn" onclick="alert('Redirecting to secure checkout...');">
+          <span id="drawer-checkout-btn-text">CHECKOUT 550</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
